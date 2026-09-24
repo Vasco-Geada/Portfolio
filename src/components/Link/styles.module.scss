@@ -1,0 +1,74 @@
+.link {
+  border-radius: 0.2rem;
+  color: inherit;
+  text-underline-offset: 0.25em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.link:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.inline {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.inline:hover {
+  color: var(--color-primary-hover);
+}
+
+.nav {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.nav:hover,
+.nav[aria-current="page"] {
+  color: var(--color-text-primary);
+}
+
+.standalone {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  color: var(--color-primary);
+  font-weight: 650;
+}
+
+.standalone:hover {
+  color: var(--color-primary-hover);
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+.muted:hover {
+  color: var(--color-text-primary);
+}
+
+.underline-none,
+.underline-hover {
+  text-decoration: none;
+}
+
+.underline-hover:hover,
+.underline-always {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

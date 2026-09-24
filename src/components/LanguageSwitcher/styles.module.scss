@@ -1,0 +1,30 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.switcher button {
+  padding: 0.3rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  transition: color 180ms ease;
+}
+
+.switcher button:hover,
+.switcher button:focus-visible,
+.switcher .active {
+  color: var(--color-primary);
+}
+
+.switcher button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}

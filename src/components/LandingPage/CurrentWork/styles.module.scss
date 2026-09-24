@@ -1,0 +1,119 @@
+.section {
+  padding-block: var(--section-space);
+  background: var(--color-surface);
+}
+
+.panel {
+  position: relative;
+  padding: clamp(1.5rem, 6vw, 4.5rem);
+  overflow: hidden;
+  border-radius: 1.75rem;
+  background: var(--gradient-dark);
+  color: var(--color-text-inverse);
+}
+
+.panel::after {
+  position: absolute;
+  top: -12rem;
+  right: -9rem;
+  width: 28rem;
+  height: 28rem;
+  border: 1px solid var(--color-inverse-border);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4rem var(--color-inverse-soft), 0 0 0 8rem var(--color-inverse-soft);
+  content: "";
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-inverse-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.label > span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-accent-bright);
+  box-shadow: 0 0 0 0.3rem var(--color-inverse-soft);
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+  align-items: end;
+  gap: clamp(3rem, 8vw, 7rem);
+}
+
+.copy {
+  display: grid;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  color: var(--color-accent-bright);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+.description {
+  color: var(--color-inverse-muted);
+}
+
+.topics {
+  display: grid;
+  border-top: 1px solid var(--color-inverse-border);
+}
+
+.topic {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--color-inverse-border);
+}
+
+.topic > span {
+  color: var(--color-accent-bright);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.badges span {
+  border-color: var(--color-inverse-border);
+  background: var(--color-inverse-soft);
+  color: var(--color-text-inverse);
+}
+
+@media (max-width: 52rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  .panel {
+    border-radius: 1.15rem;
+  }
+
+  .panel::after {
+    opacity: 0.5;
+  }
+}

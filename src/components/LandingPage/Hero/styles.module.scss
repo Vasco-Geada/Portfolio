@@ -1,0 +1,237 @@
+.hero {
+  position: relative;
+  min-height: calc(100svh - var(--header-height));
+  background: var(--gradient-hero);
+}
+.carouselOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-hero-overlay-start),
+    var(--color-hero-overlay-end)
+  );
+  pointer-events: none;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(var(--color-grid-line) 1px, var(--color-transparent) 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, var(--color-transparent) 1px);
+  background-size: 4rem 4rem;
+  content: "";
+  mask-image: linear-gradient(
+    to bottom,
+    var(--color-transparent),
+    var(--color-text-primary) 20%,
+    var(--color-transparent) 86%
+  );
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(20rem, 0.6fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 7.5rem);
+  z-index: 2;
+  padding-top: 13vh;
+}
+
+.copy {
+  max-width: 51rem;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 2rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.availability span {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0 0.25rem var(--color-highlight);
+}
+
+.eyebrow {
+  margin-bottom: 0.8rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.title {
+  max-width: 13ch;
+  color: rgba(235, 233, 233, 0.849);
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.description {
+  max-width: 43rem;
+  margin-top: 1.75rem;
+  color: rgb(235, 233, 233);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+  z-index: 4;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.location {
+  color: rgb(235, 233, 233);
+  font-size: 0.875rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.profileCard {
+  position: relative;
+  min-height: 31rem;
+  padding: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-medium);
+}
+
+.profileCard::after {
+  position: absolute;
+  right: -25%;
+  bottom: -28%;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  content: "";
+  filter: blur(0.25rem);
+}
+
+.cardTopline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.cardStatus {
+  color: var(--color-success);
+}
+
+.snapshot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.snapshot > div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+@media (max-width: 62rem) {
+  .hero {
+    min-height: auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    min-height: auto;
+  }
+
+}
+
+@media (max-width: 40rem) {
+  .hero {
+    padding-block: 3.5rem 4.5rem;
+  }
+
+  .availability {
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    display: grid;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
+
+  .meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profileCard {
+    padding: 1rem;
+    border-radius: 1.1rem;
+  }
+
+  .cardTopline {
+    font-size: 0.62rem;
+  }
+
+  .snapshot {
+    grid-template-columns: 1fr;
+  }
+}

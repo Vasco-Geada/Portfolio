@@ -1,0 +1,33 @@
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-small {
+  border-radius: 0.5rem;
+}
+
+.radius-medium {
+  border-radius: 0.9rem;
+}
+
+.radius-large {
+  border-radius: 1.25rem;
+}
+
+.radius-round {
+  border-radius: 50%;
+}

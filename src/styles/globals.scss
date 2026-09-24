@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+  --color-primary-dark: #173b8f;
+  --color-primary-light: #dbeafe;
+  --color-primary-soft: #eef5ff;
+  --color-primary-faint: #f7faff;
+  --color-accent-bright: #60a5fa;
+
+  --color-background: #f8fafc;
+  --color-background-secondary: #f0f4f9;
+  --color-background-inverse: #0b1630;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f8fc;
+  --color-surface-muted: #edf2f7;
+  --color-surface-dark: #111f3d;
+
+  --color-text-primary: #172033;
+  --color-text-secondary: #4c5a70;
+  --color-text-muted: #607086;
+  --color-text-inverse: #f8fafc;
+  --color-text-on-primary: #ffffff;
+
+  --color-border: #dde5ee;
+  --color-border-strong: #c8d3e0;
+  --color-border-primary: #9dbdfc;
+  --color-focus: #1d4ed8;
+  --color-success: #16805d;
+  --color-warning: #a85b0d;
+  --color-error: #c43d4d;
+
+  --color-shadow-soft: rgba(23, 32, 51, 0.08);
+  --color-shadow-medium: rgba(23, 32, 51, 0.13);
+  --color-overlay: rgba(11, 22, 48, 0.62);
+  --color-hero-overlay-start: rgba(5, 13, 30, 0.48);
+  --color-hero-overlay-end: rgba(5, 13, 30, 0.12);
+  --color-header: rgba(248, 250, 252, 0.9);
+  --color-grid-line: rgba(37, 99, 235, 0.09);
+  --color-highlight: rgba(37, 99, 235, 0.14);
+  --color-inverse-border: rgba(248, 250, 252, 0.16);
+  --color-inverse-muted: rgba(248, 250, 252, 0.72);
+  --color-inverse-soft: rgba(248, 250, 252, 0.08);
+  --color-transparent: transparent;
+
+  --gradient-hero: radial-gradient(circle at 78% 18%, var(--color-primary-light), transparent 30%), linear-gradient(180deg, var(--color-primary-faint), var(--color-background));
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  --gradient-dark: linear-gradient(145deg, var(--color-surface-dark), var(--color-background-inverse));
+
+  --shadow-small: 0 8px 24px var(--color-shadow-soft);
+  --shadow-medium: 0 20px 50px var(--color-shadow-medium);
+
+  --font-sans: "Aptos", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --container-width: 75rem;
+  --header-height: 5rem;
+  --section-space: clamp(5.5rem, 10vw, 5rem);
+  --page-gutter: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1.5rem);
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-block: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-highlight);
+  color: var(--color-primary-dark);
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--color-focus);
+  outline-offset: 0.1875rem;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 999;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+  transform: translateY(-150%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --header-height: 4.5rem;
+    --section-space: 4.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

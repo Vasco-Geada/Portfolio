@@ -1,0 +1,58 @@
+.title {
+  margin: 0;
+  font-weight: 720;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.small {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  letter-spacing: -0.015em;
+}
+
+.medium {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  letter-spacing: -0.025em;
+}
+
+.large {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.xl {
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.default {
+  color: var(--color-text-primary);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.muted {
+  color: var(--color-text-secondary);
+}
+
+.inherit {
+  color: inherit;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.balance {
+  text-wrap: balance;
+}

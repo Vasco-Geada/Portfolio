@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Elemental Battle project artwork</title>
+  <desc id="desc">A refined turn-based game interface showing fire and water opponents, health status and object-oriented system concepts.</desc>
+  <defs>
+    <linearGradient id="background" x1="132" y1="24" x2="1472" y2="876" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10182C"/>
+      <stop offset="0.52" stop-color="#172542"/>
+      <stop offset="1" stop-color="#0D1D37"/>
+    </linearGradient>
+    <radialGradient id="fireAura" cx="0" cy="0" r="1" gradientTransform="translate(463 418) rotate(90) scale(260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A4C" stop-opacity="0.45"/>
+      <stop offset="0.58" stop-color="#E94C55" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#E94C55" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="waterAura" cx="0" cy="0" r="1" gradientTransform="translate(1137 418) rotate(90) scale(260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#53C9FF" stop-opacity="0.45"/>
+      <stop offset="0.58" stop-color="#386AFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#386AFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fire" x1="367" y1="302" x2="540" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE071"/>
+      <stop offset="0.48" stop-color="#FF7B45"/>
+      <stop offset="1" stop-color="#E93C4F"/>
+    </linearGradient>
+    <linearGradient id="water" x1="1060" y1="291" x2="1216" y2="563" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DEBFF"/>
+      <stop offset="0.48" stop-color="#3AA4F3"/>
+      <stop offset="1" stop-color="#435CE8"/>
+    </linearGradient>
+    <linearGradient id="arena" x1="800" y1="420" x2="800" y2="748" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#324263" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#10192D" stop-opacity="0.85"/>
+    </linearGradient>
+    <pattern id="stars" width="94" height="94" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="12" r="1.2" fill="#B8D4FF" fill-opacity="0.24"/>
+      <circle cx="67" cy="44" r="1" fill="#B8D4FF" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="glowFire" x="274" y="226" width="378" height="424" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur"/>
+    </filter>
+    <filter id="glowWater" x="945" y="225" width="382" height="427" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur"/>
+    </filter>
+    <filter id="panelShadow" x="49" y="15" width="1502" height="862" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="25" flood-color="#020713" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="34" fill="url(#background)"/>
+  <rect width="1600" height="900" rx="34" fill="url(#stars)"/>
+  <ellipse cx="463" cy="418" rx="300" ry="290" fill="url(#fireAura)"/>
+  <ellipse cx="1137" cy="418" rx="300" ry="290" fill="url(#waterAura)"/>
+  <path d="M0 685C214 596 384 618 553 671C713 722 865 721 1038 669C1226 613 1386 611 1600 690V900H0V685Z" fill="url(#arena)"/>
+  <path d="M0 685C214 596 384 618 553 671C713 722 865 721 1038 669C1226 613 1386 611 1600 690" stroke="#6E85AC" stroke-opacity="0.18" stroke-width="2"/>
+  <ellipse cx="800" cy="686" rx="523" ry="109" stroke="#7890B7" stroke-opacity="0.12" stroke-width="2"/>
+  <ellipse cx="800" cy="690" rx="360" ry="72" stroke="#7890B7" stroke-opacity="0.1" stroke-width="2"/>
+
+  <g filter="url(#panelShadow)">
+    <rect x="82" y="48" width="1436" height="804" rx="30" stroke="#AEC9EE" stroke-opacity="0.15"/>
+  </g>
+
+  <g transform="translate(116 90)">
+    <rect width="176" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.07" stroke="#BED7FF" stroke-opacity="0.16"/>
+    <circle cx="20" cy="18" r="5" fill="#7EA6FF"/>
+    <text x="35" y="23" fill="#B9CDEC" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="720" letter-spacing="1.5">TURN-BASED SYSTEMS</text>
+    <text x="0" y="99" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="47" font-weight="760" letter-spacing="-1.8">Elemental Battle</text>
+    <text x="0" y="131" fill="#93A9C8" font-family="Inter, Arial, sans-serif" font-size="16">Built around composable rules, not one-off conditions.</text>
+  </g>
+
+  <g transform="translate(1130 91)">
+    <text x="0" y="18" fill="#7F96B7" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">ROUND</text>
+    <text x="1" y="58" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="760">03</text>
+    <rect x="76" y="3" width="190" height="46" rx="15" fill="#FFFFFF" fill-opacity="0.06" stroke="#BFD6FF" stroke-opacity="0.13"/>
+    <circle cx="100" cy="26" r="7" fill="#68DAAA"/>
+    <text x="117" y="31" fill="#C7D8EF" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">YOUR TURN</text>
+  </g>
+
+  <g transform="translate(126 240)">
+    <rect width="430" height="79" rx="20" fill="#111B30" fill-opacity="0.78" stroke="#FF9270" stroke-opacity="0.25"/>
+    <circle cx="42" cy="39" r="22" fill="#FF784E" fill-opacity="0.15"/>
+    <path d="M42 23C49 34 55 38 52 48C50 56 43 60 36 56C27 51 29 40 35 34C38 31 40 27 42 23Z" fill="url(#fire)"/>
+    <text x="80" y="34" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="720">Pyra</text>
+    <text x="80" y="55" fill="#A9B8CE" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="560">FIRE WARDEN · LVL 12</text>
+    <text x="352" y="32" fill="#FFD0BF" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">84 / 100</text>
+    <rect x="260" y="47" width="142" height="8" rx="4" fill="#3D2932"/>
+    <rect x="260" y="47" width="119" height="8" rx="4" fill="#FA7050"/>
+  </g>
+
+  <g transform="translate(1044 240)">
+    <rect width="430" height="79" rx="20" fill="#111B30" fill-opacity="0.78" stroke="#66CAFF" stroke-opacity="0.25"/>
+    <circle cx="388" cy="39" r="22" fill="#55BDF7" fill-opacity="0.15"/>
+    <path d="M388 21C381 33 372 42 375 51C378 59 390 61 397 55C404 49 400 39 394 31L388 21Z" fill="url(#water)"/>
+    <text x="24" y="34" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="720">Neris</text>
+    <text x="24" y="55" fill="#A9B8CE" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="560">TIDE KEEPER · LVL 12</text>
+    <text x="318" y="32" fill="#C5EEFF" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">72 / 100</text>
+    <rect x="24" y="47" width="142" height="8" rx="4" fill="#25354D"/>
+    <rect x="24" y="47" width="102" height="8" rx="4" fill="#4DBAF5"/>
+  </g>
+
+  <g filter="url(#glowFire)">
+    <path d="M456 320C491 366 526 390 520 446C516 501 481 540 438 542C383 544 346 503 351 451C355 413 379 389 398 363C420 334 426 304 428 275C440 288 449 304 456 320Z" fill="url(#fire)"/>
+    <path d="M442 390C461 415 475 431 469 458C464 483 446 496 427 486C405 475 407 451 417 432C427 414 435 402 442 390Z" fill="#FFE985"/>
+    <path d="M400 374C390 404 371 418 361 447" stroke="#FFD278" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <g filter="url(#glowWater)">
+    <path d="M1136 277C1111 329 1058 375 1058 443C1058 502 1092 542 1139 542C1187 542 1222 505 1220 450C1218 395 1171 352 1136 277Z" fill="url(#water)"/>
+    <path d="M1139 342C1125 376 1092 406 1094 449C1096 478 1111 496 1134 501C1161 507 1181 487 1182 459C1183 426 1158 389 1139 342Z" fill="#7BE5FF" fill-opacity="0.56"/>
+    <path d="M1094 393C1082 413 1078 438 1082 459" stroke="#C4F7FF" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <g transform="translate(722 390)">
+    <circle cx="78" cy="78" r="67" fill="#111C31" stroke="#B7C8E2" stroke-opacity="0.18"/>
+    <circle cx="78" cy="78" r="53" stroke="#C1D3ED" stroke-opacity="0.1" stroke-dasharray="4 8"/>
+    <text x="46" y="90" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="2">VS</text>
+    <circle cx="78" cy="8" r="4" fill="#88A7D3"/>
+    <circle cx="78" cy="148" r="4" fill="#88A7D3"/>
+  </g>
+
+  <g transform="translate(112 658)">
+    <rect width="1376" height="154" rx="25" fill="#0C1528" fill-opacity="0.88" stroke="#AFC8ED" stroke-opacity="0.13"/>
+    <text x="26" y="32" fill="#718BAD" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="740" letter-spacing="1.6">CHOOSE AN ACTION</text>
+
+    <g transform="translate(25 49)">
+      <rect width="286" height="80" rx="17" fill="#FF704B" fill-opacity="0.12" stroke="#F78360" stroke-opacity="0.34"/>
+      <circle cx="42" cy="40" r="23" fill="#FE724C" fill-opacity="0.17"/>
+      <path d="M42 24C48 34 54 38 50 48C47 55 39 58 34 53C27 47 31 38 36 33L42 24Z" fill="#FE8A55"/>
+      <text x="80" y="34" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Ember Strike</text>
+      <text x="80" y="55" fill="#A9B8CE" font-family="Inter, Arial, sans-serif" font-size="11">18 damage · 3 energy</text>
+    </g>
+    <g transform="translate(326 49)">
+      <rect width="286" height="80" rx="17" fill="#FFFFFF" fill-opacity="0.045" stroke="#AFC8ED" stroke-opacity="0.14"/>
+      <circle cx="42" cy="40" r="23" fill="#7897C2" fill-opacity="0.14"/>
+      <path d="M32 38L42 27L52 38V50H32V38Z" stroke="#9EB6D8" stroke-width="2" stroke-linejoin="round"/>
+      <text x="80" y="34" fill="#E8F0FC" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Guard</text>
+      <text x="80" y="55" fill="#899EBB" font-family="Inter, Arial, sans-serif" font-size="11">Reduce incoming damage</text>
+    </g>
+    <g transform="translate(627 49)">
+      <rect width="286" height="80" rx="17" fill="#FFFFFF" fill-opacity="0.045" stroke="#AFC8ED" stroke-opacity="0.14"/>
+      <circle cx="42" cy="40" r="23" fill="#7897C2" fill-opacity="0.14"/>
+      <circle cx="42" cy="40" r="10" stroke="#9EB6D8" stroke-width="2"/>
+      <path d="M42 25V30M42 50V55M27 40H32M52 40H57" stroke="#9EB6D8" stroke-width="2" stroke-linecap="round"/>
+      <text x="80" y="34" fill="#E8F0FC" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Focus</text>
+      <text x="80" y="55" fill="#899EBB" font-family="Inter, Arial, sans-serif" font-size="11">Restore 2 energy</text>
+    </g>
+    <g transform="translate(928 49)">
+      <rect width="423" height="80" rx="17" fill="#16233B"/>
+      <g font-family="Inter, Arial, sans-serif">
+        <rect x="19" y="16" width="74" height="23" rx="11" fill="#5A7ED8" fill-opacity="0.17"/><text x="34" y="31" fill="#91AEF3" font-size="9" font-weight="750">SYSTEM</text>
+        <text x="111" y="33" fill="#D9E5F7" font-size="12" font-weight="650">IAbility.execute(target)</text>
+        <text x="19" y="60" fill="#7F96B7" font-size="11">Polymorphism keeps every move replaceable and testable.</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(634 590)" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">
+    <rect width="100" height="29" rx="14" fill="#FFFFFF" fill-opacity="0.06"/><text x="24" y="19" fill="#AFC0D9">OOP</text>
+    <rect x="112" width="104" height="29" rx="14" fill="#FFFFFF" fill-opacity="0.06"/><text x="136" y="19" fill="#AFC0D9">MVC</text>
+    <rect x="228" width="178" height="29" rx="14" fill="#FFFFFF" fill-opacity="0.06"/><text x="251" y="19" fill="#AFC0D9">UNIT TESTS</text>
+  </g>
+</svg>

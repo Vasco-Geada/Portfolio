@@ -1,0 +1,262 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.topbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-header);
+  backdrop-filter: blur(0.75rem);
+}
+
+.topbarInner {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbarActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.brand > span:first-child {
+  color: var(--color-primary);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero {
+  padding-block: clamp(4.5rem, 9vw, 8rem) clamp(3rem, 7vw, 5.5rem);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--gradient-hero);
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heroGrid {
+  display: grid;
+  align-items: end;
+  grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.45fr);
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.projectTitle {
+  max-width: 12ch;
+}
+
+.lead {
+  margin-top: 1.5rem;
+}
+
+.projectMeta {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border-primary);
+}
+
+.metaLabel {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badges,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.actions {
+  padding-top: 0.5rem;
+}
+
+.coverFrame {
+  aspect-ratio: 16 / 8.5;
+  margin-top: clamp(3rem, 7vw, 6rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  background: var(--color-surface-muted);
+  box-shadow: var(--shadow-medium);
+}
+
+.coverImage,
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story {
+  padding-block: var(--section-space);
+}
+
+.contentSection,
+.mediaSection {
+  padding-block: clamp(2.75rem, 6vw, 5rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.contentSection:first-child,
+.mediaSection:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.sectionTitle {
+  max-width: 18ch;
+  margin-bottom: 1.4rem;
+}
+
+.prose {
+  white-space: pre-line;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figureFrame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 1.1rem;
+  background: var(--color-surface-muted);
+}
+
+.caption {
+  max-width: 60rem;
+  margin-top: 0.85rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.featureGrid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.featureCard {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  padding-left: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.featureMarker {
+  position: absolute;
+  top: 1.65rem;
+  left: 0;
+  width: 0.25rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.bottomNav {
+  padding-block: clamp(3rem, 7vw, 5rem);
+  border-top: 1px solid var(--color-inverse-border);
+  background: var(--gradient-dark);
+  color: var(--color-text-inverse);
+}
+
+.bottomNavInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.bottomNavInner > div {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.bottomNavInner h2 {
+  color: var(--color-text-inverse);
+}
+
+.bottomNavInner p {
+  color: var(--color-inverse-muted);
+}
+
+@media (max-width: 56rem) {
+  .heroGrid {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projectMeta {
+    padding-top: 1.25rem;
+    padding-left: 0;
+    border-top: 1px solid var(--color-border-primary);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 44rem) {
+  .hero {
+    padding-block: 4rem 3rem;
+  }
+
+  .coverFrame {
+    aspect-ratio: 4 / 3;
+    border-radius: 0.9rem;
+  }
+
+  .gallery,
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomNavInner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bottomNavInner > a {
+    width: 100%;
+  }
+}

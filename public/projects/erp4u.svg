@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">ERP4U project artwork</title>
+  <desc id="desc">A polished enterprise dashboard concept with business metrics, a revenue chart, inventory status and recent orders.</desc>
+  <defs>
+    <linearGradient id="background" x1="76" y1="28" x2="1511" y2="865" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F3FF"/>
+      <stop offset="0.54" stop-color="#DCEBFB"/>
+      <stop offset="1" stop-color="#C9DEF4"/>
+    </linearGradient>
+    <linearGradient id="sidebar" x1="160" y1="91" x2="418" y2="798" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2E52"/>
+      <stop offset="1" stop-color="#0A203B"/>
+    </linearGradient>
+    <linearGradient id="areaChart" x1="0" y1="0" x2="0" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D83E6" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#2D83E6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dotPattern" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#276DAA" fill-opacity="0.12"/>
+    </pattern>
+    <filter id="shadow" x="83" y="40" width="1434" height="826" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#173B5B" flood-opacity="0.22"/>
+    </filter>
+    <filter id="cardShadow" x="0" y="0" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#234766" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="34" fill="url(#background)"/>
+  <rect width="1600" height="900" rx="34" fill="url(#dotPattern)"/>
+  <circle cx="1470" cy="76" r="260" fill="#77B9F5" fill-opacity="0.16"/>
+  <circle cx="72" cy="846" r="285" fill="#93C7F5" fill-opacity="0.19"/>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="68" width="1360" height="764" rx="30" fill="#F8FBFF"/>
+  </g>
+  <path d="M390 68H1450C1466.57 68 1480 81.4315 1480 98V802C1480 818.569 1466.57 832 1450 832H390V68Z" fill="#F8FBFF"/>
+  <path d="M150 68H390V832H150C133.431 832 120 818.569 120 802V98C120 81.4315 133.431 68 150 68Z" fill="url(#sidebar)"/>
+
+  <g transform="translate(160 112)">
+    <rect width="48" height="48" rx="14" fill="#53AEFF"/>
+    <path d="M14 15H34V21H20V25H32V31H20V35H14V15Z" fill="#FFFFFF"/>
+    <text x="64" y="34" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="760" letter-spacing="-0.8">ERP4U</text>
+    <text x="2" y="94" fill="#7295B3" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" letter-spacing="1.7">WORKSPACE</text>
+
+    <rect x="-12" y="117" width="202" height="48" rx="13" fill="#FFFFFF" fill-opacity="0.1"/>
+    <rect x="-12" y="117" width="4" height="48" rx="2" fill="#5BB5FF"/>
+    <path d="M4 134H18V148H4V134ZM7 127H15V131H7V127Z" stroke="#75C4FF" stroke-width="2" stroke-linejoin="round"/>
+    <text x="35" y="146" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650">Overview</text>
+
+    <g fill="none" stroke="#7B9BB7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 201H20V216H3V201ZM7 197H16"/>
+      <circle cx="11" cy="269" r="9"/><path d="M-1 287C1 279 7 277 11 277C15 277 21 279 23 287"/>
+      <path d="M2 334H21V351H2V334ZM7 329H16V334M7 340H16"/>
+      <path d="M2 403H21V420H2V403ZM6 398V403M17 398V403M2 409H21"/>
+      <path d="M3 468H21V485H3V468ZM7 477H10L13 472L17 481"/>
+    </g>
+    <g fill="#9BB4C9" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="560">
+      <text x="35" y="213">Orders</text>
+      <text x="35" y="278">Customers</text>
+      <text x="35" y="345">Inventory</text>
+      <text x="35" y="414">Calendar</text>
+      <text x="35" y="480">Reports</text>
+    </g>
+
+    <rect x="-4" y="574" width="194" height="94" rx="17" fill="#123D66" stroke="#26577F"/>
+    <circle cx="23" cy="604" r="13" fill="#65C7A5" fill-opacity="0.2"/>
+    <path d="M17 604L21 608L29 599" stroke="#70DBB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="46" y="602" fill="#D5E7F6" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">All systems ready</text>
+    <text x="46" y="621" fill="#7799B5" font-family="Inter, Arial, sans-serif" font-size="11">Last sync · just now</text>
+    <text x="14" y="650" fill="#5DB5F5" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">VIEW STATUS →</text>
+  </g>
+
+  <g transform="translate(438 105)">
+    <text x="0" y="32" fill="#173650" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750" letter-spacing="-0.7">Good morning, Vasco</text>
+    <text x="0" y="58" fill="#71899D" font-family="Inter, Arial, sans-serif" font-size="14">Here is what is happening across your business today.</text>
+    <rect x="780" y="2" width="50" height="50" rx="16" fill="#E3F1FE"/>
+    <path d="M797 28H813M805 20V36" stroke="#257DCE" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="849" y="2" width="151" height="50" rx="16" fill="#FFFFFF" stroke="#DCE8F2"/>
+    <circle cx="877" cy="27" r="15" fill="#CDE8FF"/>
+    <path d="M870 31C871 26 874 24 877 24C880 24 883 26 884 31M877 22C880 22 882 20 882 17C882 14 880 12 877 12C874 12 872 14 872 17C872 20 874 22 877 22Z" fill="#3489D5"/>
+    <text x="902" y="24" fill="#24445C" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Vasco G.</text>
+    <text x="902" y="39" fill="#8498A9" font-family="Inter, Arial, sans-serif" font-size="10">Administrator</text>
+
+    <g transform="translate(0 102)" filter="url(#cardShadow)">
+      <rect width="230" height="120" rx="19" fill="#FFFFFF"/>
+      <circle cx="36" cy="35" r="18" fill="#E4F2FF"/>
+      <path d="M28 36L34 41L45 29" stroke="#2684D8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="65" y="33" fill="#6B8498" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600">Completed orders</text>
+      <text x="22" y="88" fill="#173650" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="760">1,284</text>
+      <rect x="142" y="70" width="67" height="26" rx="13" fill="#E8F8F1"/>
+      <text x="158" y="87" fill="#18845F" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">+12.4%</text>
+    </g>
+    <g transform="translate(250 102)" filter="url(#cardShadow)">
+      <rect width="230" height="120" rx="19" fill="#FFFFFF"/>
+      <circle cx="36" cy="35" r="18" fill="#EDE9FF"/>
+      <path d="M29 39V32L36 27L43 32V39L36 43L29 39Z" stroke="#7059C8" stroke-width="2"/>
+      <text x="65" y="33" fill="#6B8498" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600">Active products</text>
+      <text x="22" y="88" fill="#173650" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="760">846</text>
+      <rect x="151" y="70" width="58" height="26" rx="13" fill="#F0EDFD"/>
+      <text x="166" y="87" fill="#6853BA" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">+4.2%</text>
+    </g>
+    <g transform="translate(500 102)" filter="url(#cardShadow)">
+      <rect width="230" height="120" rx="19" fill="#FFFFFF"/>
+      <circle cx="36" cy="35" r="18" fill="#FFF1E3"/>
+      <path d="M29 39L36 27L43 39H29Z" stroke="#D77A22" stroke-width="2" stroke-linejoin="round"/>
+      <text x="65" y="33" fill="#6B8498" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600">Low stock alerts</text>
+      <text x="22" y="88" fill="#173650" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="760">18</text>
+      <rect x="143" y="70" width="66" height="26" rx="13" fill="#FFF1E3"/>
+      <text x="159" y="87" fill="#BC681E" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">Review</text>
+    </g>
+    <g transform="translate(750 102)" filter="url(#cardShadow)">
+      <rect width="250" height="120" rx="19" fill="#0E3A61"/>
+      <circle cx="36" cy="35" r="18" fill="#FFFFFF" fill-opacity="0.1"/>
+      <path d="M29 36H43M32 31L29 36L32 41M40 31L43 36L40 41" stroke="#84D3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="65" y="33" fill="#AAC4D9" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600">Net revenue</text>
+      <text x="22" y="88" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="760">€84.2K</text>
+      <rect x="169" y="70" width="60" height="26" rx="13" fill="#62D3A9" fill-opacity="0.15"/>
+      <text x="182" y="87" fill="#74DCB5" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">+8.7%</text>
+    </g>
+
+    <g transform="translate(0 245)" filter="url(#cardShadow)">
+      <rect width="650" height="332" rx="20" fill="#FFFFFF"/>
+      <text x="24" y="36" fill="#1A3A53" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="720">Revenue overview</text>
+      <text x="24" y="59" fill="#8296A7" font-family="Inter, Arial, sans-serif" font-size="11">Last 7 months</text>
+      <rect x="530" y="19" width="94" height="34" rx="12" fill="#F3F7FB"/>
+      <text x="549" y="41" fill="#4F6B80" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="650">This year⌄</text>
+      <g stroke="#E7EEF4">
+        <path d="M48 99H620M48 149H620M48 199H620M48 249H620"/>
+      </g>
+      <path d="M48 247C86 229 112 238 150 205C186 173 218 198 258 171C295 146 326 158 366 127C407 96 438 136 478 103C516 72 557 83 620 52V269H48V247Z" fill="url(#areaChart)"/>
+      <path d="M48 247C86 229 112 238 150 205C186 173 218 198 258 171C295 146 326 158 366 127C407 96 438 136 478 103C516 72 557 83 620 52" stroke="#2B83DE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#FFFFFF" stroke="#2B83DE" stroke-width="3">
+        <circle cx="150" cy="205" r="5"/><circle cx="258" cy="171" r="5"/><circle cx="366" cy="127" r="5"/><circle cx="478" cy="103" r="5"/><circle cx="620" cy="52" r="5"/>
+      </g>
+      <g fill="#8296A7" font-family="Inter, Arial, sans-serif" font-size="10">
+        <text x="44" y="296">Jan</text><text x="136" y="296">Feb</text><text x="228" y="296">Mar</text><text x="320" y="296">Apr</text><text x="412" y="296">May</text><text x="504" y="296">Jun</text><text x="600" y="296">Jul</text>
+      </g>
+    </g>
+
+    <g transform="translate(670 245)" filter="url(#cardShadow)">
+      <rect width="330" height="332" rx="20" fill="#FFFFFF"/>
+      <text x="22" y="36" fill="#1A3A53" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="720">Recent orders</text>
+      <text x="246" y="36" fill="#2C7FD0" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">VIEW ALL</text>
+      <path d="M22 59H308" stroke="#E8EEF4"/>
+      <g font-family="Inter, Arial, sans-serif">
+        <circle cx="42" cy="91" r="18" fill="#E3F1FE"/><text x="33" y="96" fill="#2E7EC6" font-size="12" font-weight="750">AM</text>
+        <text x="72" y="88" fill="#28475D" font-size="12" font-weight="700">Almeida &amp; Martins</text><text x="72" y="105" fill="#8397A7" font-size="10">#1048 · €1,240.00</text>
+        <rect x="249" y="80" width="59" height="22" rx="11" fill="#E8F8F1"/><text x="262" y="95" fill="#16815D" font-size="9" font-weight="700">PAID</text>
+        <circle cx="42" cy="155" r="18" fill="#F0EBFF"/><text x="33" y="160" fill="#7058C5" font-size="12" font-weight="750">NS</text>
+        <text x="72" y="152" fill="#28475D" font-size="12" font-weight="700">Norte Studio</text><text x="72" y="169" fill="#8397A7" font-size="10">#1047 · €860.00</text>
+        <rect x="238" y="144" width="70" height="22" rx="11" fill="#FFF1E3"/><text x="250" y="159" fill="#BA691F" font-size="9" font-weight="700">PENDING</text>
+        <circle cx="42" cy="219" r="18" fill="#E5F7F2"/><text x="33" y="224" fill="#258769" font-size="12" font-weight="750">RV</text>
+        <text x="72" y="216" fill="#28475D" font-size="12" font-weight="700">Ribeiro Verde</text><text x="72" y="233" fill="#8397A7" font-size="10">#1046 · €2,105.00</text>
+        <rect x="249" y="208" width="59" height="22" rx="11" fill="#E8F8F1"/><text x="262" y="223" fill="#16815D" font-size="9" font-weight="700">PAID</text>
+        <circle cx="42" cy="283" r="18" fill="#FFEDEC"/><text x="33" y="288" fill="#C75A55" font-size="12" font-weight="750">CA</text>
+        <text x="72" y="280" fill="#28475D" font-size="12" font-weight="700">Costa Atelier</text><text x="72" y="297" fill="#8397A7" font-size="10">#1045 · €575.00</text>
+        <rect x="238" y="272" width="70" height="22" rx="11" fill="#EDF4FA"/><text x="251" y="287" fill="#587287" font-size="9" font-weight="700">DRAFT</text>
+      </g>
+    </g>
+
+    <g transform="translate(0 598)">
+      <rect width="1000" height="82" rx="18" fill="#EAF3FB"/>
+      <rect x="18" y="17" width="48" height="48" rx="15" fill="#FFFFFF"/>
+      <path d="M31 40H53M35 32H49M35 48H47" stroke="#2D82D2" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="84" y="35" fill="#24465F" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Inventory review ready</text>
+      <text x="84" y="56" fill="#718A9E" font-family="Inter, Arial, sans-serif" font-size="11">18 products need attention before the next fulfilment cycle.</text>
+      <rect x="843" y="21" width="137" height="40" rx="13" fill="#287FD1"/>
+      <text x="876" y="46" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">OPEN REPORT</text>
+    </g>
+  </g>
+</svg>

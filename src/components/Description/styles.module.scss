@@ -1,0 +1,59 @@
+.description {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.medium {
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+}
+
+.large {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.default {
+  color: var(--color-text-primary);
+}
+
+.muted {
+  color: var(--color-text-secondary);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.width-compact {
+  max-width: 34rem;
+}
+
+.width-default {
+  max-width: 44rem;
+}
+
+.width-wide {
+  max-width: 60rem;
+}
+
+.width-none {
+  max-width: none;
+}

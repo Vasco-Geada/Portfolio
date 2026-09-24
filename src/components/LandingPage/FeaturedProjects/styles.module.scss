@@ -1,0 +1,163 @@
+.section {
+  padding-block: var(--section-space);
+  background: var(--color-surface);
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heading > div {
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.card:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+}
+
+.card:hover {
+  border-color: var(--color-border-primary);
+  box-shadow: var(--shadow-small);
+  transform: translateY(-0.25rem);
+}
+
+.imageWrap {
+  position: relative;
+  min-height: 15rem;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.card:first-child .imageWrap {
+  min-height: 25rem;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.025);
+}
+
+.index {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid var(--color-inverse-border);
+  border-radius: 50%;
+  background: var(--color-overlay);
+  color: var(--color-text-inverse);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.projectLink,
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.projectLink {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 56rem) {
+  .heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:first-child {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .card:first-child .imageWrap {
+    min-height: 18rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .heading {
+    margin-bottom: 2rem;
+  }
+
+  .heading > a {
+    width: 100%;
+  }
+
+  .imageWrap,
+  .card:first-child .imageWrap {
+    min-height: 13rem;
+  }
+}

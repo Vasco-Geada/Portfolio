@@ -1,0 +1,64 @@
+.text {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.size-xsmall {
+  font-size: 0.75rem;
+}
+
+.size-small {
+  font-size: 0.875rem;
+}
+
+.size-medium {
+  font-size: 1rem;
+}
+
+.size-large {
+  font-size: 1.125rem;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-semibold {
+  font-weight: 650;
+}
+
+.tone-default {
+  color: var(--color-text-primary);
+}
+
+.tone-secondary {
+  color: var(--color-text-secondary);
+}
+
+.tone-muted {
+  color: var(--color-text-muted);
+}
+
+.tone-primary {
+  color: var(--color-primary);
+}
+
+.tone-inherit {
+  color: inherit;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}

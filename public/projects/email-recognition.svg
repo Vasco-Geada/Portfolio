@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Email Recognition PT-PT project artwork</title>
+  <desc id="desc">A conceptual interface showing a Portuguese email transformed into classified events and temporal information.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="30" x2="1460" y2="870" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07192F"/>
+      <stop offset="0.52" stop-color="#0A2A4D"/>
+      <stop offset="1" stop-color="#0C3A63"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="227" y1="217" x2="589" y2="537" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58C6FF"/>
+      <stop offset="1" stop-color="#4485FF"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="802" y1="112" x2="1398" y2="781" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#EAF4FF" stop-opacity="0.96"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1248 164) rotate(132) scale(620 590)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A9DFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#2A9DFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#B8DCFF" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="shadow" x="690" y="60" width="856" height="792" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#001329" flood-opacity="0.35"/>
+    </filter>
+    <filter id="softGlow" x="142" y="148" width="475" height="460" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="34" fill="url(#background)"/>
+  <rect width="1600" height="900" rx="34" fill="url(#grid)"/>
+  <rect width="1600" height="900" rx="34" fill="url(#glow)"/>
+  <circle cx="1480" cy="72" r="210" fill="#55B7FF" fill-opacity="0.08"/>
+  <circle cx="83" cy="830" r="238" fill="#4B7CFF" fill-opacity="0.09"/>
+
+  <g opacity="0.3" filter="url(#softGlow)">
+    <path d="M235 289L377 203L537 285V462L383 552L235 466V289Z" fill="#249DFF"/>
+  </g>
+
+  <g transform="translate(116 112)">
+    <rect width="248" height="40" rx="20" fill="#8BD8FF" fill-opacity="0.14" stroke="#91DCFF" stroke-opacity="0.34"/>
+    <circle cx="22" cy="20" r="5" fill="#70D3FF"/>
+    <text x="38" y="26" fill="#C7EAFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.7">MASTER'S RESEARCH · NLP</text>
+
+    <text x="0" y="118" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="750" letter-spacing="-2.7">Email</text>
+    <text x="0" y="188" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="750" letter-spacing="-2.7">Recognition</text>
+    <text x="0" y="245" fill="#7DD4FF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="650" letter-spacing="0.7">Português Europeu</text>
+
+    <text x="0" y="304" fill="#BBD2E7" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="450">From unstructured inbox messages</text>
+    <text x="0" y="334" fill="#BBD2E7" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="450">to events, intent and time.</text>
+
+    <g transform="translate(0 390)">
+      <path d="M20 21L57 0L94 21V63L57 84L20 63V21Z" fill="url(#accent)"/>
+      <rect x="36" y="26" width="42" height="32" rx="5" stroke="#FFFFFF" stroke-width="3"/>
+      <path d="M38 29L57 44L76 29" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="104" cy="21" r="7" fill="#61D9AC" stroke="#07192F" stroke-width="4"/>
+      <path d="M127 42H187" stroke="#5AAEFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 9"/>
+      <path d="M179 33L188 42L179 51" stroke="#5AAEFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="209" y="4" width="116" height="76" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#85CBFF" stroke-opacity="0.34"/>
+      <path d="M231 28H303M231 42H286M231 56H296" stroke="#A7D9FF" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(0 526)" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650">
+      <rect width="92" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.08" stroke="#9DDAFF" stroke-opacity="0.22"/>
+      <text x="22" y="25" fill="#D8EEFF">BERT</text>
+      <rect x="104" width="82" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.08" stroke="#9DDAFF" stroke-opacity="0.22"/>
+      <text x="127" y="25" fill="#D8EEFF">NLP</text>
+      <rect x="198" width="184" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.08" stroke="#9DDAFF" stroke-opacity="0.22"/>
+      <text x="220" y="25" fill="#D8EEFF">Question Answering</text>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="730" y="86" width="754" height="724" rx="30" fill="url(#panel)"/>
+    <rect x="730.5" y="86.5" width="753" height="723" rx="29.5" stroke="#FFFFFF" stroke-opacity="0.62"/>
+  </g>
+  <path d="M730 153H1484" stroke="#BED2E6"/>
+  <circle cx="772" cy="120" r="7" fill="#FF8B8B"/>
+  <circle cx="796" cy="120" r="7" fill="#FFD26D"/>
+  <circle cx="820" cy="120" r="7" fill="#67D9AC"/>
+  <rect x="868" y="104" width="352" height="32" rx="16" fill="#E7F0F9"/>
+  <circle cx="891" cy="120" r="6" stroke="#6E8CA8" stroke-width="2"/>
+  <path d="M895 125L900 130" stroke="#6E8CA8" stroke-width="2" stroke-linecap="round"/>
+  <rect x="1392" y="108" width="58" height="24" rx="12" fill="#287FE8" fill-opacity="0.12"/>
+  <text x="1407" y="125" fill="#176BCB" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">PT-PT</text>
+
+  <g transform="translate(770 190)">
+    <text x="0" y="18" fill="#183650" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750" letter-spacing="1.5">SOURCE MESSAGE</text>
+    <rect x="0" y="40" width="312" height="490" rx="20" fill="#FFFFFF" stroke="#D5E3F0"/>
+    <circle cx="34" cy="76" r="15" fill="#D8ECFF"/>
+    <path d="M26 76H42M34 68V84" stroke="#3285DC" stroke-width="2" stroke-linecap="round"/>
+    <text x="59" y="72" fill="#173650" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Equipa de projeto</text>
+    <text x="59" y="90" fill="#758BA0" font-family="Inter, Arial, sans-serif" font-size="12">Hoje, 09:42</text>
+    <path d="M22 112H290" stroke="#E3ECF4"/>
+    <text x="24" y="146" fill="#193650" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Reunião de acompanhamento</text>
+    <text x="24" y="184" fill="#567087" font-family="Inter, Arial, sans-serif" font-size="14">Olá Vasco,</text>
+    <text x="24" y="214" fill="#567087" font-family="Inter, Arial, sans-serif" font-size="14">Podemos reunir na próxima</text>
+    <rect x="20" y="228" width="236" height="25" rx="6" fill="#E1F2FF"/>
+    <text x="24" y="246" fill="#176CC6" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">terça-feira, às 14h30</text>
+    <text x="24" y="279" fill="#567087" font-family="Inter, Arial, sans-serif" font-size="14">para rever os resultados?</text>
+    <text x="24" y="325" fill="#567087" font-family="Inter, Arial, sans-serif" font-size="14">Obrigado,</text>
+    <text x="24" y="347" fill="#567087" font-family="Inter, Arial, sans-serif" font-size="14">Miguel</text>
+    <rect x="22" y="386" width="268" height="72" rx="12" fill="#F4F8FC"/>
+    <circle cx="47" cy="413" r="9" fill="#61CFA2" fill-opacity="0.2"/>
+    <path d="M43 413L46 416L52 409" stroke="#159A6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="65" y="414" fill="#315269" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650">Language detected</text>
+    <text x="65" y="435" fill="#7B91A4" font-family="Inter, Arial, sans-serif" font-size="12">Portuguese · Europe</text>
+
+    <g transform="translate(342 0)">
+      <text x="0" y="18" fill="#183650" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750" letter-spacing="1.5">STRUCTURED OUTPUT</text>
+      <rect x="0" y="40" width="332" height="212" rx="20" fill="#0C3156"/>
+      <rect x="20" y="61" width="78" height="28" rx="14" fill="#5CC9FF" fill-opacity="0.16"/>
+      <text x="38" y="80" fill="#79D4FF" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750">INTENT</text>
+      <text x="20" y="124" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Schedule meeting</text>
+      <text x="20" y="151" fill="#A7C5DD" font-family="Inter, Arial, sans-serif" font-size="13">Confidence</text>
+      <rect x="20" y="166" width="292" height="8" rx="4" fill="#365777"/>
+      <rect x="20" y="166" width="264" height="8" rx="4" fill="#59C8FF"/>
+      <text x="270" y="202" fill="#7BD6FF" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">0.91</text>
+
+      <rect x="0" y="270" width="332" height="122" rx="20" fill="#FFFFFF" stroke="#D5E3F0"/>
+      <rect x="20" y="290" width="74" height="25" rx="12" fill="#E6F2FF"/>
+      <text x="37" y="307" fill="#2674C6" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="750">EVENT</text>
+      <text x="20" y="343" fill="#1E405A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Project follow-up</text>
+      <text x="20" y="369" fill="#70899D" font-family="Inter, Arial, sans-serif" font-size="12">Participants · Vasco, Miguel</text>
+
+      <rect x="0" y="410" width="332" height="120" rx="20" fill="#FFFFFF" stroke="#D5E3F0"/>
+      <rect x="20" y="430" width="66" height="25" rx="12" fill="#E9F8F3"/>
+      <text x="34" y="447" fill="#168662" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="750">WHEN</text>
+      <text x="20" y="482" fill="#1E405A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Tuesday · 14:30</text>
+      <text x="20" y="508" fill="#70899D" font-family="Inter, Arial, sans-serif" font-size="12">Relative date resolved from context</text>
+    </g>
+  </g>
+
+  <g transform="translate(1094 430)">
+    <circle cx="0" cy="0" r="26" fill="#2584E7"/>
+    <path d="M-8 -5L0 3L8 -5M0 3V12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
