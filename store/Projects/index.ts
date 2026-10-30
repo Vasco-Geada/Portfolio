@@ -57,6 +57,7 @@ export interface Project {
 export interface ProjectsPageContent {
   skipToContent: string;
   backHome: string;
+  eyebrow: string;
   title: string;
   description: string;
   allProjects: string;

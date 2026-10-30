@@ -32,7 +32,7 @@ export function Contact() {
             <Link
               key={link.label}
               href={link.href}
-              external={link.id !== "email"}
+              external={link.id === "github" || link.id === "linkedin"}
               className={styles.social}
             >
               <span>

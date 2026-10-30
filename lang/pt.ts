@@ -38,21 +38,30 @@ const pt = {
         href: "mailto:geadavasco@gmail.com",
         icon: "mail",
       },
+      {
+        id: "phone",
+        label: "+351 962 976 705",
+        href: "tel:+351962976705",
+        icon: "phone",
+      },
     ],
   },
   metadata: {
     defaultTitle: "Vasco Geada | Engenheiro de Software",
     applicationName: "Vasco Geada — Portfólio",
     description:
-      "Engenheiro de Software, Programador de Frontend, Inteligência Artificial e Machine Learning.",
+      "Engenheiro de software com quase dois anos de experiência em frontend, aplicações SaaS B2B e desenvolvimento web com React, Next.js e TypeScript.",
     keywords: [
       "Vasco Geada",
       "Engenheiro de Software",
       "Programador de Frontend",
-      "Engenheiro de IA",
+      "Programador Full-Stack",
       "Next.js",
-      "Javascript",
+      "TypeScript",
+      "JavaScript",
       "React",
+      "Java",
+      "NLP",
       "Machine Learning",
     ],
     openGraphLocale: "pt_PT",
@@ -71,6 +80,7 @@ const pt = {
       items: [
         { label: "Projetos", href: "#projects" },
         { label: "Experiência", href: "#experience" },
+        { label: "Formação", href: "#education" },
         { label: "Sobre mim", href: "#about" },
         { label: "Contacto", href: "#contact" },
       ],
@@ -84,8 +94,8 @@ const pt = {
           title: "Desenvolvimento de",
           titleEmphasis: "Software.",
           description:
-            "Desenvolvo e mantenho aplicações web de frontend em produção, integro APIs REST e resolvo problemas com equipas de diferentes departamentos.",
-          skills: ["TypeScript", "JavaScript", "Python", "REST APIs", "Git", "Java"],
+            "Tenho quase dois anos de experiência em desenvolvimento frontend para aplicações SaaS B2B e estou a desenvolver o DevTrack em Java, aprofundando também competências de backend.",
+          skills: ["Java", "TypeScript", "JavaScript", "Python", "SQL", "Git"],
           image: {
             src: "/hero/software-development.png",
             alt: "Módulos de software interligados numa visualização azul-escura",
@@ -96,8 +106,8 @@ const pt = {
           title: "Programador de",
           titleEmphasis: "Frontend",
           description:
-            "Construo interfaces responsivas com React, Next.js, Vue.js e Nuxt.js. Em produção, ajudei a migrar mais de 20 módulos de Nuxt.js para Next.js.",
-          skills: ["React", "Next.js", "TypeScript", "Vue.js", "Nuxt.js", "JavaScript", "HTML", "CSS", "Acessibilidade Web Básica", "SCSS"],
+            "Desenvolvi aplicações web em produção com React, Next.js, Vue.js e Nuxt.js, incluindo a migração de mais de 20 módulos de Nuxt.js para Next.js.",
+          skills: ["React", "Next.js", "TypeScript", "Vue.js", "Nuxt.js", "JavaScript", "HTML5", "CSS3", "REST APIs"],
           image: {
             src: "/hero/frontend-engineering.png",
             alt: "Interfaces web responsivas e componentes sobrepostos em tons de azul",
@@ -108,8 +118,8 @@ const pt = {
           title: "Desenvolvimento de",
           titleEmphasis: "Jogos",
           description:
-            "Desenvolvi em equipa o Elemental Battle, um jogo de tabuleiro por turnos em Java com cartas, duelos e casas surpresa.",
-          skills: ["Java", "OOP", "Sistemas por turnos", "Mecânicas de cartas", "Regras de jogo"],
+            "Desenvolvi o Elemental Battle, um jogo de consola em Java, aplicando herança, polimorfismo, abstração e interfaces à lógica do jogo.",
+          skills: ["Java", "OOP", "Herança", "Polimorfismo", "Abstração", "Interfaces"],
           image: {
             src: "/hero/game-development.png",
             alt: "Tabuleiro isométrico de um jogo de estratégia por turnos",
@@ -120,8 +130,8 @@ const pt = {
           title: "IA e Engenharia",
           titleEmphasis: "de Dados",
           description:
-            "Na minha dissertação, construo um pipeline de NLP para classificar emails em português europeu e extrair informação estruturada.",
-          skills: ["Python", "scikit-learn", "PyTorch", "Transformers", "spaCy", "Bert", "NLP", "Machine Learning", "Question Answering"],
+            "Na minha dissertação, desenvolvo uma pipeline modular de PLN para classificar emails em português europeu e extrair informação estruturada.",
+          skills: ["Python", "scikit-learn", "PyTorch", "Hugging Face Transformers", "spaCy", "BERTimbau", "NLP", "Machine Learning"],
           image: {
             src: "/hero/ai-data-engineering.png",
             alt: "Fluxo de dados a atravessar camadas de um modelo de linguagem", 
@@ -131,7 +141,7 @@ const pt = {
       viewWork: "Ver o meu trabalho",
       downloadCv: "Descarregar CV",
       socialProfilesAriaLabel: "Perfis sociais",
-      location: "Portugal · Disponível para trabalho remoto",
+      location: "Torres Novas, Portugal · Disponível para trabalho remoto",
       technologiesAriaLabel: "Competências desta área",
       carousel: {
         ariaLabel: "Áreas de interesse profissional",
@@ -144,7 +154,7 @@ const pt = {
       profileLabel: "PERFIL / 01",
       openToWork: "Disponível",
       focusLabel: "Foco",
-      focusValue: "IA + Web",
+      focusValue: "Software + Web",
       approachLabel: "Abordagem",
       approachValue: "Útil, clara e fiável",
     },
@@ -156,110 +166,144 @@ const pt = {
       viewCaseStudy: "Ver caso de estudo",
     },
     about: {
-      title: "Curioso por natureza. Prático por escolha.",
+      title: "Experiência de produção, aprendizagem contínua.",
       introduction:
-        "Sou engenheiro de software e gosto de transformar problemas ambíguos em produtos claros e úteis. Os meus interesses encontram-se entre experiências web cuidadas e inteligência artificial aplicada.",
+        "Sou engenheiro de software com quase dois anos de experiência em desenvolvimento web frontend, incluindo aplicações SaaS B2B em produção com React, Next.js, TypeScript e JavaScript.",
       description:
-        "Dou tanta importância aos detalhes por trás de um produto como à interface que se vê: arquitetura sensata, código sustentável, colaboração honesta e tecnologia escolhida com intenção. É a aprender, construir e simplificar a experiência de alguém que faço o meu melhor trabalho.",
+        "Tenho experiência com APIs REST, debugging, MySQL e desenvolvimento Agile em equipas multidisciplinares. Atualmente, desenvolvo um projeto em Java centrado em programação orientada a objetos, enquanto aprofundo competências de backend e continuo a investigação em PLN e Machine Learning.",
       principles: [
         {
           icon: "code",
-          title: "Construir com intenção",
-          description: "Bases simples que podem crescer sem se tornarem um obstáculo.",
+          title: "Resolver e melhorar",
+          description: "Debugging, tratamento de erros e melhorias de desempenho orientadas a aplicações reais.",
         },
         {
           icon: "spark",
-          title: "Continuar a explorar",
-          description: "Novas ideias são úteis quando melhoram os resultados para as pessoas.",
+          title: "Aprender continuamente",
+          description: "Evolução do frontend para Java, backend, PLN e Machine Learning.",
         },
       ],
     },
     experience: {
-      title: "Trabalho, investigação e evolução contínua.",
+      title: "Experiência profissional em desenvolvimento web.",
       description:
-        "Experiência construída com execução prática, responsabilidade técnica e aprendizagem contínua.",
+        "Experiência em aplicações de produção, integrações com APIs e colaboração com equipas multidisciplinares.",
       entries: [
         {
-          role: "Investigador de Dissertação de Mestrado",
-          company: "Investigação académica",
-          startDate: "2025",
+          role: "Programador Frontend",
+          company: "Digital Manager Guru · Portugal, remoto",
+          startDate: "01/2024",
+          endDate: "07/2025",
+          description:
+            "Desenvolvi e mantive aplicações web em produção, contribuí para a migração de mais de 20 módulos de Nuxt.js para Next.js, implementei funcionalidades e resolvi problemas de produção e desempenho. Integrei APIs REST, consultei backend Laravel quando necessário e trabalhei com Git/GitHub, GCP, Jira e práticas Agile.",
+          technologies: ["React", "Next.js", "Nuxt.js", "TypeScript", "JavaScript", "REST APIs", "Laravel", "GCP", "Jira"],
+        },
+        {
+          role: "Estagiário de Desenvolvimento Frontend",
+          company: "Digital Manager Guru · Santarém, Portugal · 755 horas",
+          startDate: "04/2022",
+          endDate: "08/2022",
+          description:
+            "Desenvolvi funcionalidades em Vue.js, JavaScript, HTML e CSS, modernizei o portal MyOrders e criei novos módulos. Trabalhei em integrações com Twilio, NuPay e MaxiPago, criei componentes reutilizáveis e melhorei o tratamento de erros das APIs.",
+          technologies: ["Vue.js", "JavaScript", "HTML", "CSS", "REST APIs", "Twilio", "NuPay", "MaxiPago"],
+        },
+        {
+          role: "Estagiário de Desenvolvimento Web",
+          company: "Alta Densidade Informática · Lisboa, Portugal",
+          startDate: "02/2020",
+          endDate: "07/2020",
+          description:
+            "Desenvolvi e mantive websites com WordPress, HTML, CSS e PHP, contribuí para aplicações web e melhorei interfaces e código existentes.",
+          technologies: ["WordPress", "HTML", "CSS", "PHP"],
+        },
+      ],
+    },
+    education: {
+      title: "Formação académica.",
+      description:
+        "Um percurso contínuo em informática, engenharia de software e investigação aplicada.",
+      entries: [
+        {
+          qualification: "Mestrado em Informática Aplicada",
+          institution: "Universidade Politécnica de Santarém",
+          startDate: "08/2024",
           endDate: "Presente",
           description:
-            "Investigo como transformar emails em português europeu em eventos e informação temporal estruturada, desde a exploração dos dados e estratégia de anotação até experiências com transformers e respetiva avaliação.",
-          technologies: [
-            "Python",
-            "BERT",
-            "Transformers",
-            "NLP",
-            "Question Answering",
-          ],
+            "Dissertação: Reconhecimento Automático de Eventos e Expressões Temporais em Emails — Desenvolvimento de um Modelo em Português Europeu.",
         },
         {
-          role: "Programador Full-Stack",
-          company: "ERP4U · Projeto académico",
-          startDate: "2024",
-          endDate: "2025",
-          description:
-            "Contribuí para um protótipo de ERP em Laravel e PHP, com interfaces Blade e operações de gestão de fornecedores, famílias e códigos postais.",
-          technologies: ["PHP", "Laravel", "Blade", "Bootstrap", "jQuery"],
+          qualification: "Licenciatura em Engenharia Informática",
+          institution: "Universidade Politécnica de Santarém",
+          startDate: "09/2025",
+          endDate: "07/2026",
         },
         {
-          role: "Programador de Software de Jogos",
-          company: "Elemental Battle · Projeto académico",
-          startDate: "2023",
-          endDate: "2024",
-          description:
-            "Desenvolvi em equipa um jogo de tabuleiro por turnos em Java, aplicando programação orientada a objetos às regras do tabuleiro, às cartas e aos duelos entre jogadores.",
-          technologies: ["Java", "OOP"],
+          qualification: "Licenciatura em Informática",
+          institution: "Universidade Politécnica de Santarém",
+          startDate: "08/2022",
+          endDate: "06/2024",
+        },
+        {
+          qualification: "CTeSP em Tecnologias e Programação de Sistemas de Informação",
+          institution: "Universidade Politécnica de Santarém",
+          startDate: "08/2020",
+          endDate: "06/2022",
         },
       ],
     },
     skills: {
-      title: "A ferramenta certa para cada problema.",
+      title: "Competências técnicas.",
       description:
-        "Um conjunto prático de competências desenvolvido através de trabalho profissional, projetos académicos e investigação contínua.",
+        "Tecnologias e práticas utilizadas em experiência profissional, projetos e investigação.",
       categories: [
         {
-          title: "Frontend",
+          title: "Linguagens de programação",
           description:
-            "Interfaces acessíveis e responsivas, construídas sobre uma arquitetura de componentes sólida.",
-          skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "SCSS"],
+            "Linguagens utilizadas em aplicações web, projetos orientados a objetos e processamento de dados.",
+          skills: ["Java", "TypeScript", "JavaScript", "Python", "SQL"],
         },
         {
-          title: "Backend",
+          title: "Full-stack e desenvolvimento web",
           description:
-            "Serviços aplicacionais, lógica de domínio e APIs construídos sobre bases sustentáveis.",
-          skills: ["Python", "C#", "Java", "PHP", "Laravel"],
+            "Desenvolvimento de interfaces e integração de aplicações web com serviços backend.",
+          skills: ["React", "Next.js", "Node.js", "Vue.js", "Nuxt.js", "REST APIs", "HTML5", "CSS3"],
+        },
+        {
+          title: "Backend e bases de dados",
+          description:
+            "Experiência com persistência relacional e familiaridade com desenvolvimento backend em Laravel e PHP.",
+          skills: ["Laravel (familiar)", "PHP (familiar)", "MySQL", "SQL Server"],
+        },
+        {
+          title: "Engenharia de software",
+          description:
+            "Práticas de conceção, diagnóstico e colaboração aplicadas ao ciclo de desenvolvimento.",
+          skills: ["OOP", "Design Patterns", "Debugging", "Tratamento de erros de API", "Performance", "Git", "Agile", "JSON"],
         },
         {
           title: "IA / Machine Learning",
           description:
-            "Experimentação centrada em linguagem, desde a preparação de dados à modelação e avaliação.",
+            "Investigação e desenvolvimento de uma pipeline modular para emails em português europeu.",
           skills: [
-            "scikit-learn",
-            "Transformers",
-            "BERT",
-            "NLP",
             "Machine Learning",
-            "Question Answering",
+            "NLP",
+            "scikit-learn",
+            "PyTorch",
+            "Hugging Face Transformers",
+            "spaCy",
+            "BERTimbau",
           ],
         },
         {
-          title: "Bases de dados",
+          title: "Cloud e ferramentas",
           description:
-            "Modelação de dados relacionais e em grafo para produtos e projetos de investigação.",
-          skills: ["PostgreSQL", "MySQL", "SQL Server", "Neo4j"],
-        },
-        {
-          title: "Ferramentas",
-          description:
-            "Fluxos de trabalho práticos para versionamento, colaboração e entregas reproduzíveis.",
-          skills: ["Git", "GitHub", "Docker"],
+            "Ferramentas utilizadas no desenvolvimento, colaboração, cloud e desenho de interfaces.",
+          skills: ["Google Cloud Platform", "Docker", "GitHub", "Postman", "Jira", "Figma"],
         },
       ],
     },
     currentWork: {
-      status: "Investigação em curso",
+      status: "Em desenvolvimento desde 01/2026",
       learnMore: "Saber mais",
       topicsAriaLabel: "Tópicos de investigação",
       content: {
@@ -267,7 +311,7 @@ const pt = {
         title:
           "Reconhecimento Automático de Eventos e Expressões Temporais em Emails: Desenvolvimento de um Modelo em Português Europeu",
         description:
-          "Estou a desenvolver um sistema para a compreensão automática de emails em português europeu, explorando a forma como modelos de linguagem podem classificar mensagens e extrair eventos, datas e informação estruturada relevante.",
+          "Investigo abordagens de PLN e Machine Learning e desenvolvo uma pipeline modular em Python para classificar a intenção de emails em português europeu e extrair eventos, expressões temporais e informação estruturada.",
         projectHref: "/projects/email-recognition",
         topics: [
           "Processamento de Linguagem Natural",
@@ -275,15 +319,14 @@ const pt = {
           "Classificação de Emails",
           "Extração de Eventos",
           "Expressões Temporais",
-          "Question Answering",
         ],
-        technologies: ["Python", "Machine Learning", "PT-PT"],
+        technologies: ["Python", "scikit-learn", "spaCy", "PyTorch", "Hugging Face Transformers", "BERTimbau"],
       },
     },
     contact: {
       title: "Vamos trabalhar juntos",
       description:
-        "Estou disponível para conversar sobre Engenharia de Software, Desenvolvimento Frontend e IA aplicada. Se estás a construir algo com valor, terei todo o gosto em saber mais.",
+        "Estou disponível para oportunidades em desenvolvimento de software, full-stack e frontend. Também tenho interesse em Java, backend, PLN e Machine Learning.",
     },
     footer: {
       socialLinksAriaLabel: "Ligações sociais",
@@ -293,6 +336,7 @@ const pt = {
   projectsPage: {
     skipToContent: "Saltar para o conteúdo",
     backHome: "Voltar ao início",
+    eyebrow: "Portfólio",
     title: "Projetos com uma história por trás.",
     description:
       "Um olhar mais próximo sobre investigação em IA aplicada, desenvolvimento de produto e design de software — incluindo as decisões, compromissos e aprendizagens por trás de cada projeto.",
@@ -322,24 +366,77 @@ const pt = {
   },
   projects: [
     {
-      id: "email-recognition",
-      title: "Email Recognition PT-PT",
+      id: "devtrack",
+      title: "DevTrack",
       shortDescription:
-        "Um sistema de investigação em Processamento de Linguagem Natural (NLP) que transforma emails em português europeu, em contexto profissional ou académico, em eventos estruturados e sinais temporais.",
+        "Aplicação Java em desenvolvimento para gerir projetos de software, inspirada em conceitos do Git e do Jira.",
       description:
-        "A minha dissertação de mestrado explora uma pipeline de processamento de linguagem para compreender emails em português europeu: classificar mensagens, extrair e identificar reuniões e determinar quando, onde e com quem acontecem.",
+        "O DevTrack aplica programação orientada a objetos a um domínio de gestão de projetos, com diferentes tipos de tarefas e regras para atribuições, estados e evolução do trabalho.",
+      image: {
+        src: "/projects/devtrack.svg",
+        alt: "Ilustração conceptual do DevTrack com tarefas ligadas a um fluxo de desenvolvimento",
+      },
+      technologies: ["Java", "OOP", "Git"],
+      githubUrl: "https://github.com/Vasco-Geada/DevTrack",
+      featured: true,
+      sections: [
+        {
+          type: "text",
+          title: "Objetivo do projeto",
+          content:
+            "Iniciado em setembro de 2026, o DevTrack explora a gestão de projetos de software através de conceitos inspirados no Git e no Jira. A aplicação organiza projetos, tarefas, atribuições e estados num modelo de domínio em Java.",
+        },
+        {
+          type: "features",
+          title: "Trabalho em desenvolvimento",
+          features: [
+            {
+              title: "Modelo orientado a objetos",
+              description:
+                "Herança, polimorfismo, abstração e encapsulamento representam diferentes tipos de tarefas e comportamentos.",
+            },
+            {
+              title: "Regras de projeto",
+              description:
+                "A lógica do domínio define atribuições, transições de estado e gestão dos projetos de software.",
+            },
+            {
+              title: "Evolução planeada",
+              description:
+                "O roteiro prevê uma API REST com Spring Boot e uma interface React construída com Next.js.",
+            },
+          ],
+        },
+        {
+          type: "image",
+          title: "Fluxo conceptual",
+          src: "/projects/devtrack.svg",
+          alt: "Fluxo conceptual de tarefas e estados no DevTrack",
+          caption:
+            "Ilustração conceptual do portfólio para um projeto ainda em desenvolvimento.",
+        },
+      ],
+    },
+    {
+      id: "email-recognition",
+      title: "Sistema de Reconhecimento de Eventos",
+      shortDescription:
+        "Sistema de PLN e Machine Learning para classificar emails em português europeu e extrair informação estruturada.",
+      description:
+        "A minha dissertação de mestrado investiga abordagens de Processamento de Linguagem Natural e Machine Learning para reconhecer eventos e expressões temporais em emails em português europeu.",
       image: {
         src: "/projects/email-recognition.svg",
         alt: "Interface conceptual de análise de email que transforma uma mensagem em português em resultados estruturados de NLP",
       },
-      technologies: ["Python", "scikit-learn", "PyTorch", "Hugging", "Face", "Transformers", "spaCy", "Machine Learning", "Question Answering", "PT-PT"],
+      technologies: ["Python", "scikit-learn", "spaCy", "PyTorch", "Hugging Face Transformers", "BERTimbau", "Machine Learning", "NLP"],
+      githubUrl: "https://github.com/Vasco-Geada/email_recognition_pt_pt",
       featured: true,
       sections: [
         {
           type: "text",
           title: "O problema de investigação",
           content:
-            "Os emails contêm ações, datas e compromissos importantes, mas a sua linguagem informal e contexto conversacional dificultam o processamento automático dessa informação. O português europeu representa um desafio adicional, uma vez que existem comparativamente menos conjuntos de dados representativos e modelos especializados.",
+            "Os emails contêm eventos, intenções e expressões temporais relevantes, mas a sua linguagem e contexto dificultam a extração automática. O trabalho investiga e seleciona abordagens adequadas ao processamento de emails em português europeu.",
         },
         {
           type: "features",
@@ -361,9 +458,9 @@ const pt = {
                 "Reconhecer expressões temporais explícitas e relativas e associá-las aos respetivos eventos.",
             },
             {
-              title: "Question answering",
+              title: "Pipeline modular",
               description:
-                "Explorar a extração dirigida através de perguntas em linguagem natural sobre o conteúdo das mensagens.",
+                "Organizar classificação e extração em módulos Python com requisitos, arquitetura e configurações de modelos explícitos.",
             },
           ],
         },
@@ -371,13 +468,13 @@ const pt = {
           type: "text",
           title: "Abordagem de trabalho",
           content:
-            "O trabalho combina uma estratégia de anotação cuidadosamente definida com baselines baseadas em transformers e experiências específicas para cada tarefa. A avaliação é desenhada por capacidade, permitindo comparar classificação, extração e raciocínio temporal de forma independente antes da sua integração num pipeline mais amplo.",
+            "O trabalho envolve investigação e seleção de abordagens, definição dos requisitos dos módulos, arquitetura e configurações dos modelos. O sistema é implementado e aperfeiçoado de forma iterativa com Python, scikit-learn, spaCy, PyTorch, Hugging Face Transformers e BERTimbau.",
         },
         {
           type: "image",
           title: "Da caixa de entrada ao conhecimento estruturado",
           src: "/projects/email-recognition.svg",
-          alt: "Resumo visual do pipeline de processamento do Email Recognition PT-PT",
+          alt: "Resumo visual do pipeline do Sistema de Reconhecimento de Eventos",
           caption:
             "Imagem conceptual do fluxo de investigação; deverá ser substituída por um diagrama de arquitetura ou resultado experimental verificado.",
         },
@@ -449,9 +546,9 @@ const pt = {
       id: "elemental-battle",
       title: "Elemental Battle",
       shortDescription:
-        "Jogo de tabuleiro por turnos em Java para 2 a 6 jogadores, com cartas, duelos e casas surpresa.",
+        "Jogo de consola por turnos em Java para 2 a 6 jogadores, com tabuleiro, cartas, duelos e casas surpresa.",
       description:
-        "Projeto académico desenvolvido em colaboração com Olavo Cacheiro para aplicar programação orientada a objetos e engenharia de software. Os jogadores percorrem um tabuleiro de 25 casas e disputam duelos com cartas; o objetivo é alcançar 10 vitórias.",
+        "Projeto académico desenvolvido entre 2021 e 2022 em colaboração com Olavo Cacheiro. A aplicação usa programação orientada a objetos para modelar um jogo de consola em que os jogadores percorrem um tabuleiro de 25 casas e disputam duelos com cartas.",
       image: {
         src: "/projects/elemental-battle.svg",
         alt: "Ilustração conceptual do Elemental Battle, um jogo de tabuleiro com duelos por turnos",
@@ -514,7 +611,7 @@ const pt = {
           type: "text",
           title: "Aprendizagem técnica",
           content:
-            "O projeto permitiu aplicar Java e programação orientada a objetos à modelação de jogadores, cartas, tabuleiro, turnos e duelos, organizando as regras de um jogo com várias interações entre jogadores.",
+            "O projeto permitiu aplicar herança, polimorfismo, abstração e interfaces para modelar entidades e comportamentos do jogo, separando responsabilidades em classes e componentes reutilizáveis.",
         },
       ],
     },

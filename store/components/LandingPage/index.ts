@@ -10,6 +10,14 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface EducationEntry {
+  qualification: string;
+  institution: string;
+  startDate: string;
+  endDate: string;
+  description?: string;
+}
+
 export interface NavigationItem {
   label: string;
   href: `#${string}`;
@@ -22,7 +30,7 @@ export interface SkillCategory {
 }
 
 export interface SocialLink {
-  id: "github" | "linkedin" | "email";
+  id: "github" | "linkedin" | "email" | "phone";
   label: string;
   href: string;
   icon: SocialIconName;
@@ -92,6 +100,11 @@ export interface HomeContent {
     title: string;
     description: string;
     entries: Experience[];
+  };
+  education: {
+    title: string;
+    description: string;
+    entries: EducationEntry[];
   };
   skills: {
     title: string;

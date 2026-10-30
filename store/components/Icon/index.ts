@@ -7,13 +7,14 @@ export type IconName =
   | "github"
   | "linkedin"
   | "mail"
+  | "phone"
   | "download"
   | "menu"
   | "code"
   | "briefcase"
   | "spark";
 
-export type SocialIconName = Extract<IconName, "github" | "linkedin" | "mail">;
+export type SocialIconName = Extract<IconName, "github" | "linkedin" | "mail" | "phone">;
 
 export type IconSize = "small" | "medium" | "large" | number;
 

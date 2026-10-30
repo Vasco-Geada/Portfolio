@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 import { About } from "@/components/LandingPage/About";
 import { Contact } from "@/components/LandingPage/Contact";
 import { CurrentWork } from "@/components/LandingPage/CurrentWork";
+import { Education } from "@/components/LandingPage/Education";
 import { Experience } from "@/components/LandingPage/Experience";
 import { FeaturedProjects } from "@/components/LandingPage/FeaturedProjects";
 import { Footer } from "@/components/LandingPage/Footer";
@@ -43,6 +44,7 @@ export default function HomePage() {
           <FeaturedProjects />
           <About />
           <Experience />
+          <Education />
           <Skills />
           <CurrentWork />
           <Contact />
