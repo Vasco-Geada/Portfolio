@@ -90,6 +90,30 @@ const pt = {
       greeting: "Olá, sou o Vasco Geada.",
       slides: [
         {
+          id: "devOps",
+          title: "DevOps e",
+          titleEmphasis: "DevSecOps.",
+          description:
+            "Construí uma pipeline de integração contínua e entrega contínua (CI/CD) para aplicações web, incluindo testes, linting, build e deploy automatizados.",
+          skills: ["Python", "Docker", "Kubernetes", "Terraform", "Helm", "CI/CD", "GitHub Actions"],
+          image: {
+            src: "/hero/ai-data-engineering.png",
+            alt: "Fluxo de dados a atravessar camadas de um modelo de linguagem", 
+          },
+        },
+        {
+          id: "cloud",
+          title: "Engenheiro de",
+          titleEmphasis: "Cloud.",
+          description:
+            "Construí um home lab de infraestrutura como código (IaC) para aplicações cloud, incluindo provisionamento, configuração e gestão de recursos.",
+          skills: ["Proxmox", "PfSense", "Kubernetes", "Terraform", "Helm", "Docker", "Grafana"],
+          image: {
+            src: "/hero/ai-data-engineering.png",
+            alt: "Fluxo de dados a atravessar camadas de um modelo de linguagem", 
+          },
+        },
+        {
           id: "software",
           title: "Desenvolvimento de",
           titleEmphasis: "Software.",
@@ -99,18 +123,6 @@ const pt = {
           image: {
             src: "/hero/software-development.png",
             alt: "Módulos de software interligados numa visualização azul-escura",
-          },
-        },
-        {
-          id: "frontend",
-          title: "Programador de",
-          titleEmphasis: "Frontend",
-          description:
-            "Desenvolvi aplicações web em produção com React, Next.js, Vue.js e Nuxt.js, incluindo a migração de mais de 20 módulos de Nuxt.js para Next.js.",
-          skills: ["React", "Next.js", "TypeScript", "Vue.js", "Nuxt.js", "JavaScript", "HTML5", "CSS3", "REST APIs"],
-          image: {
-            src: "/hero/frontend-engineering.png",
-            alt: "Interfaces web responsivas e componentes sobrepostos em tons de azul",
           },
         },
         {
@@ -324,9 +336,9 @@ const pt = {
       },
     },
     contact: {
-      title: "Vamos trabalhar juntos",
+      title: "Fala comigo",
       description:
-        "Estou disponível para oportunidades em desenvolvimento de software, full-stack e frontend. Também tenho interesse em Java, backend, PLN e Machine Learning.",
+        "Estou disponível para oportunidades em DevOPS, DevSecOps, Cloud Engineer e desenvolvimento de software.",
     },
     footer: {
       socialLinksAriaLabel: "Ligações sociais",

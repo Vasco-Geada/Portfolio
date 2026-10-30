@@ -89,6 +89,30 @@ const en = {
       availability: "Available for new opportunities",
       greeting: "Hi, I'm Vasco Geada.",
       slides: [
+         {
+          id: "devOps",
+          title: "DevOps &",
+          titleEmphasis: "DevSecOps.",
+          description:
+            "I developed a CI/CD pipeline for web applications, including automated testing, linting, build and deployment for my home lab.",
+          skills: ["Python", "Docker", "Kubernetes", "Terraform", "Helm", "CI/CD", "GitHub Actions"],
+          image: {
+            src: "/hero/ai-data-engineering.png",
+            alt: "Fluxo de dados a atravessar camadas de um modelo de linguagem", 
+          },
+        },
+        {
+          id: "cloud",
+          title: "Cloud",
+          titleEmphasis: "Engineering",
+          description:
+            "I built a home lab of infrastructure as code (IaC) for cloud applications, including provisioning, configuration and management of resources.",
+          skills: ["Proxmox", "PfSense", "Kubernetes", "Terraform", "Helm", "Docker", "Grafana"],
+          image: {
+            src: "/hero/ai-data-engineering.png",
+            alt: "Fluxo de dados a atravessar camadas de um modelo de linguagem", 
+          },
+        },
         {
           id: "software",
           title: "Software",
@@ -99,18 +123,6 @@ const en = {
           image: {
             src: "/hero/software-development.png",
             alt: "Interconnected software modules in a dark-blue visualisation",
-          },
-        },
-        {
-          id: "frontend",
-          title: "Frontend",
-          titleEmphasis: "Engineering",
-          description:
-            "I developed production web applications with React, Next.js, Vue.js and Nuxt.js, including the migration of more than 20 modules from Nuxt.js to Next.js.",
-          skills: ["React", "Next.js", "TypeScript", "Vue.js", "Nuxt.js", "JavaScript", "HTML5", "CSS3", "REST APIs"],
-          image: {
-            src: "/hero/frontend-engineering.png",
-            alt: "Responsive web interfaces and layered components in blue",
           },
         },
         {
@@ -324,9 +336,9 @@ const en = {
       },
     },
     contact: {
-      title: "Let's work together",
+      title: "Talk to me",
       description:
-        "I'm open to software development, full-stack and frontend opportunities. I am also interested in Java, backend development, NLP and Machine Learning.",
+        "I'm open to DevOps, DevSecOps, Cloud Engineer and software development opportunities.",
     },
     footer: {
       socialLinksAriaLabel: "Social links",
