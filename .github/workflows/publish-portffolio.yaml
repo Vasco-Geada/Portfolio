@@ -1,0 +1,53 @@
+name: Publicar atualizações do portfólio diáriamente
+
+on:
+  schedule:
+    - cron: '0 13 * * 1,3,5' # Executa diariamente à meia-noite
+      timezone: Europe/Lisbon
+
+  permissions:
+    contents: read
+    packages: write
+
+  concurrency:
+    group: 'publish-portfolio'
+    cancel-in-progress: false
+
+  jobs:
+    publicar:
+      name: Construir e prublicar portfólio
+      if: github.ref == 'refs/heads/main'
+      runs-on: ubuntu-latest
+      timeout-minutes: 30
+
+    env:
+      SOURVE_SHA: ${{ github.sha }}
+
+    steps:
+      - name: Obter código do main
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          path: aplicacao
+          persist-credentials: false
+
+      - name: Obter configuracao da infraestrutura
+        uses: actions/checkout@v7
+        with:
+         repository: ${{ vars.INFRA_RESPOSITORY }}
+         token: ${{ secrets.INFRA_REPO_TOKEN }}
+         ref: main
+         path: infraestrutura
+
+      - name: Verificar se existem alteracoes por publicar
+        id: verificar
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config.user.name "github-actions[bot]"
+          git config.user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add portfolio/portfolio.yaml portfolio/.ultima-versao
+          got commit -m "Atualizar versão para ${SOURCE_SHA}"
+          
