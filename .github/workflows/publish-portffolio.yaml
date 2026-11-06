@@ -1,7 +1,6 @@
 name: Publicar portfolio diariamente
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "0 13 * * 1,3,5" # 13:00 Lisbon mon, wed, fri
       timezone: Europe/Lisbon
