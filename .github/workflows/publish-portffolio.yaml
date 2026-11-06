@@ -1,30 +1,30 @@
-name: Publicar atualizações do portfólio diáriamente
+name: Publicar portfolio diariamente
 
 on:
   schedule:
-    - cron: '0 13 * * 1,3,5' # Executa diariamente à meia-noite
+    - cron: "0 13 * * 1,3,5" # 13:00 Lisbon mon, wed, fri
       timezone: Europe/Lisbon
 
-  permissions:
-    contents: read
-    packages: write
+permissions:
+  contents: read
+  packages: write
 
-  concurrency:
-    group: 'publish-portfolio'
-    cancel-in-progress: false
+concurrency:
+  group: publicar-portfolio
+  cancel-in-progress: false
 
-  jobs:
-    publicar:
-      name: Construir e prublicar portfólio
-      if: github.ref == 'refs/heads/main'
-      runs-on: ubuntu-latest
-      timeout-minutes: 30
+jobs:
+  publicar:
+    name: Construir e promover nova versao
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     env:
-      SOURVE_SHA: ${{ github.sha }}
+      SOURCE_SHA: ${{ github.sha }}
 
     steps:
-      - name: Obter código do main
+      - name: Obter codigo do main
         uses: actions/checkout@v7
         with:
           ref: ${{ github.sha }}
@@ -34,10 +34,10 @@ on:
       - name: Obter configuracao da infraestrutura
         uses: actions/checkout@v7
         with:
-         repository: ${{ vars.INFRA_RESPOSITORY }}
-         token: ${{ secrets.INFRA_REPO_TOKEN }}
-         ref: main
-         path: infraestrutura
+          repository: ${{ vars.INFRA_REPOSITORY }}
+          token: ${{ secrets.INFRA_REPO_TOKEN }}
+          ref: main
+          path: infraestrutura
 
       - name: Verificar se existem alteracoes por publicar
         id: verificar
@@ -45,9 +45,136 @@ on:
         run: |
           set -euo pipefail
 
-          git config.user.name "github-actions[bot]"
-          git config.user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          manifest="infraestrutura/portfolio/portfolio.yaml"
+          marcador="infraestrutura/portfolio/.ultima-versao"
+
+          test -f "$manifest"
+
+          anterior=""
+          if [ -f "$marcador" ]; then
+            anterior="$(cat "$marcador")"
+          fi
+
+          if [ "$anterior" = "$SOURCE_SHA" ]; then
+            echo "alterado=false" >> "$GITHUB_OUTPUT"
+            echo "Sem alteracoes por publicar." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "alterado=true" >> "$GITHUB_OUTPUT"
+
+            imagem="ghcr.io/${GITHUB_REPOSITORY,,}"
+            echo "imagem=$imagem" >> "$GITHUB_OUTPUT"
+
+            echo "Nova versao: $SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Preparar Docker Buildx
+        if: steps.verificar.outputs.alterado == 'true'
+        uses: docker/setup-buildx-action@v4
+
+      - name: Autenticar no GHCR
+        if: steps.verificar.outputs.alterado == 'true'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Construir e publicar imagem
+        if: steps.verificar.outputs.alterado == 'true'
+        id: imagem
+        uses: docker/build-push-action@v7
+        with:
+          context: ./aplicacao
+          file: ./aplicacao/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ${{ steps.verificar.outputs.imagem }}:sha-${{ env.SOURCE_SHA }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.revision=${{ env.SOURCE_SHA }}
+
+      - name: Preparar ferramenta para editar YAML
+        if: steps.verificar.outputs.alterado == 'true'
+        shell: bash
+        run: |
+          python3 -m venv "$RUNNER_TEMP/portfolio-yaml"
+          "$RUNNER_TEMP/portfolio-yaml/bin/pip" install "PyYAML==6.0.3"
+
+      - name: Atualizar manifesto da aplicacao
+        if: steps.verificar.outputs.alterado == 'true'
+        env:
+          IMAGE_NAME: ${{ steps.verificar.outputs.imagem }}
+          IMAGE_DIGEST: ${{ steps.imagem.outputs.digest }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git -C infraestrutura pull --ff-only origin main
+
+          "$RUNNER_TEMP/portfolio-yaml/bin/python" <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          import yaml
+
+          digest = os.environ["IMAGE_DIGEST"]
+          if not re.fullmatch(r"sha256:[0-9a-f]{64}", digest):
+              raise SystemExit("Digest da imagem invalido.")
+
+          caminho = Path("infraestrutura/portfolio/portfolio.yaml")
+          documentos = list(yaml.safe_load_all(caminho.read_text()))
+          encontrados = 0
+
+          for documento in documentos:
+              if not isinstance(documento, dict):
+                  continue
+              if documento.get("kind") != "Deployment":
+                  continue
+
+              metadata = documento.get("metadata", {})
+              if metadata.get("name") != "portfolio":
+                  continue
+              if metadata.get("namespace") != "portfolio":
+                  continue
+
+              pod = documento["spec"]["template"]["spec"]
+
+              for container in pod["containers"]:
+                  if container["name"] == "portfolio":
+                      container["image"] = (
+                          f'{os.environ["IMAGE_NAME"]}@{digest}'
+                      )
+                      container["imagePullPolicy"] = "IfNotPresent"
+                      encontrados += 1
+
+          if encontrados != 1:
+              raise SystemExit(
+                  "Era esperado exatamente um container portfolio "
+                  "no Deployment portfolio do namespace portfolio."
+              )
+
+          caminho.write_text(
+              yaml.safe_dump_all(documentos, sort_keys=False)
+          )
+
+          Path("infraestrutura/portfolio/.ultima-versao").write_text(
+              os.environ["SOURCE_SHA"] + "\n"
+          )
+          PY
+
+      - name: Guardar nova versao na infraestrutura
+        if: steps.verificar.outputs.alterado == 'true'
+        working-directory: infraestrutura
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add portfolio/portfolio.yaml portfolio/.ultima-versao
-          got commit -m "Atualizar versão para ${SOURCE_SHA}"
-          
+          git commit -m "Atualizar portfolio para ${SOURCE_SHA}"
+          git push origin HEAD:main
+
+          echo "Imagem publicada e manifesto atualizado." >> "$GITHUB_STEP_SUMMARY"
